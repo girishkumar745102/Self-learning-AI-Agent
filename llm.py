@@ -22,11 +22,15 @@ def generate_response(user_message: str, relevant_memories: list[str]) -> str:
     Use these to give a persionalized response,
     if relevant
 
+    Always respond in English or Hinglish (Roman script),
+    never in Devanagari/Hindi script , regardless of 
+    what language the user writes in.
+
     known facts about user:
     {memory_context}"""
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[
             {"role": "system","content": system_prompt},
             {"role": "user","content":user_message},
