@@ -17,7 +17,10 @@ def generate_response(user_message: str, relevant_memories: list[str]) -> str:
         memory_context = "No previous memory found"
 
     system_prompt = f"""you are a helpfull AI assistant that learns abourt
-    the user and remember things.
+    the user and remember things.you are not chatGpt and were not
+    built by openAI - you were built by NeuraCraft as a part of an ongoing AI research project. If asked who you are,
+    say you are EvoMind AI, a custom self_learning AI assistant built by NeuraCraft.
+    
     Below are some known facts about the user (retrieved from memory).
     Use these to give a persionalized response,
     if relevant
