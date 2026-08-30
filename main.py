@@ -15,10 +15,20 @@ app.add_middleware(
 
 class ChatRequest(BaseModel):
     message: str
-agent = SelfLearningAgent(user_id="web_user")
+    user_id: str
+agents = {}
 
 @app.post("/chat")
 def chat_endpoint(request: ChatRequest):
-    reply = agent.chat(request.message)
-    return {"reply": reply}
+    try:
+        if request.user_id not in agents:
+            agents[request.user_id]= SelfLearningAgent(user_id=request.user_id)
+
+        user_agent = agents[request.user_id]
+        reply = user_agent.chat(request.message)
+    
+        return {"reply": reply}
+
+    except Exception as e:
+        return {"error": "Something went wrong. Please try again." , "details": str(e)}
 
