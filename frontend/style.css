@@ -1,0 +1,47 @@
+croot {
+  --bg: #0a0d13;
+  --panel: #0f131b;
+  --panel-2: #161b26;
+  --border: #212836;
+  --text: #e8ecf4;
+  --text-dim: #6b7488;
+  --text-faint: #454e60;
+
+  --indigo: #5b6eff;
+  --indigo-dim: #23294f;
+  --teal: #4fe3c4;
+  --teal-dim: #163832;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(91, 110, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(79, 227, 196, 0.06), transparent 40%);
+  font-family: var(--font-body);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 720px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
