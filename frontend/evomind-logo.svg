@@ -1,0 +1,23 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="evomind-stroke" x1="30" y1="65" x2="80" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5b6eff"/>
+      <stop offset="100%" stop-color="#4fe3c4"/>
+    </linearGradient>
+    <radialGradient id="evomind-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4fe3c4" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#4fe3c4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <path d="M 37 63 Q 39 51 44 47 Q 51 42 59 39 Q 67 36 75 33"
+        fill="none" stroke="url(#evomind-stroke)" stroke-width="2.4"
+        stroke-linecap="round"/>
+
+  <circle cx="37" cy="63" r="3.4" fill="#0f131b" stroke="#5b6eff" stroke-width="2"/>
+  <circle cx="44" cy="47" r="4.6" fill="#0f131b" stroke="#7a7bf0" stroke-width="2"/>
+  <circle cx="59" cy="39" r="6" fill="#0f131b" stroke="#63c9dd" stroke-width="2"/>
+
+  <circle cx="75" cy="33" r="16" fill="url(#evomind-glow)"/>
+  <circle cx="75" cy="33" r="8.4" fill="#4fe3c4"/>
+</svg>
