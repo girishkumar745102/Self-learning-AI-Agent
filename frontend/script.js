@@ -90,3 +90,21 @@ chatForm.addEventListener("submit", (event) => {
   messageInput.value = "";
   sendMessage(text);
 });
+
+
+// ---- Theme toggle ----
+const themeToggle = document.getElementById("theme-toggle");
+
+function applyTheme(theme) {
+  document.body.classList.toggle("light-theme", theme === "light");
+  localStorage.setItem("evomind_theme", theme);
+}
+
+// Load saved theme preference, if any
+const savedTheme = localStorage.getItem("evomind_theme") || "dark";
+applyTheme(savedTheme);
+
+themeToggle.addEventListener("click", () => {
+  const isLight = document.body.classList.contains("light-theme");
+  applyTheme(isLight ? "dark" : "light");
+});
