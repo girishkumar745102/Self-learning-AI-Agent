@@ -42,6 +42,15 @@ def generate_response(user_message: str, relevant_memories: list[str]) -> str:
     )
     return response.choices[0].message.content
 
-
-
+def transcribe_audio(audio_file_path: str) -> str:
+    """
+    Takes a path to an audio file, sends it to Groq's Whisper model,
+    and returns the transcrib text.
+    """
+    with open(audio_file_path, "rb") as audio_file:
+        transcription = client.audio.transcriptions.create(
+            file=audio_file,
+            model = "Wisper-large-v3,"
+        )
+    return transcription.text    
 

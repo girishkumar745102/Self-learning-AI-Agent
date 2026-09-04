@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from agent import SelfLearningAgent
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from fastapi import File, UploadFile
+from llm import transcribe_audio
+import shutil
 
 app = FastAPI()
 

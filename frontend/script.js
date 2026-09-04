@@ -13,8 +13,6 @@ const emptyState = document.getElementById("empty-state");
 const sessionTag = document.getElementById("session-tag");
 
 // ---- User ID handling ----
-// Each browser gets its own random user_id, saved in localStorage.
-// This is the "simple version" of multi-user support (no real login yet).
 function getUserId() {
   let userId = localStorage.getItem("evomind_user_id");
   if (!userId) {
@@ -29,11 +27,9 @@ sessionTag.textContent = "session · " + userId;
 
 // ---- Adding messages to the chat window ----
 function addMessage(text, sender) {
-  // sender is "user", "agent", or "error"
-
-  // Remove the empty state the first time a message is sent
-  if (emptyState) {
-    emptyState.remove();
+  const currentEmptyState = document.querySelector(".empty-state");
+  if (currentEmptyState) {
+    currentEmptyState.remove();
   }
 
   const messageDiv = document.createElement("div");
@@ -46,7 +42,6 @@ function addMessage(text, sender) {
   messageDiv.appendChild(bubble);
   chatWindow.appendChild(messageDiv);
 
-  // Auto-scroll to the latest message
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
@@ -82,7 +77,7 @@ async function sendMessage(text) {
 
 // ---- Handling the form submit (Send button or Enter key) ----
 chatForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // stop the page from reloading
+  event.preventDefault();
   const text = messageInput.value.trim();
   if (text === "") return;
 
@@ -91,20 +86,49 @@ chatForm.addEventListener("submit", (event) => {
   sendMessage(text);
 });
 
+// ---- Menu dropdown ----
+const menuBtn = document.getElementById("menu-btn");
+const dropdownMenu = document.getElementById("dropdown-menu");
+const menuTheme = document.getElementById("menu-theme");
+const menuNewChat = document.getElementById("menu-new-chat");
+const menuHistory = document.getElementById("menu-history");
+
+menuBtn.addEventListener("click", (event) => {
+  event.stopPropagation();
+  dropdownMenu.classList.toggle("open");
+});
+
+document.addEventListener("click", () => {
+  dropdownMenu.classList.remove("open");
+});
 
 // ---- Theme toggle ----
-const themeToggle = document.getElementById("theme-toggle");
-
 function applyTheme(theme) {
   document.body.classList.toggle("light-theme", theme === "light");
   localStorage.setItem("evomind_theme", theme);
 }
 
-// Load saved theme preference, if any
 const savedTheme = localStorage.getItem("evomind_theme") || "dark";
 applyTheme(savedTheme);
 
-themeToggle.addEventListener("click", () => {
+menuTheme.addEventListener("click", () => {
   const isLight = document.body.classList.contains("light-theme");
   applyTheme(isLight ? "dark" : "light");
+});
+
+// ---- New chat (visual reset for now) ----
+menuNewChat.addEventListener("click", () => {
+  chatWindow.innerHTML = "";
+  const freshEmptyState = document.createElement("div");
+  freshEmptyState.className = "empty-state";
+  freshEmptyState.innerHTML = `
+    <p class="empty-title">New chat started</p>
+    <p class="empty-sub">Note: EvoMind still remembers earlier facts from this session — full separate chat history is coming soon.</p>
+  `;
+  chatWindow.appendChild(freshEmptyState);
+});
+
+// ---- History (placeholder) ----
+menuHistory.addEventListener("click", () => {
+  alert("Chat history is coming soon — this will let you revisit past conversations once accounts are added.");
 });

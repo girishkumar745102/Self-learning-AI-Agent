@@ -1,4 +1,4 @@
-croot {
+:root {
   --bg: #0a0d13;
   --panel: #0f131b;
   --panel-2: #161b26;
@@ -62,6 +62,11 @@ body {
   gap: 12px;
 }
 
+.brand-logo {
+  width: 34px;
+  height: 34px;
+}
+
 .brand-text h1 {
   margin: 0;
   font-family: var(--font-display);
@@ -86,33 +91,70 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Synapse mark — signature element: three nodes pulsing in sequence,
-   representing the memory graph the agent is building as you talk to it */
+/* ---- Menu (three-dot dropdown) ---- */
 
-.synapse-line {
-  stroke: var(--indigo);
-  stroke-width: 1.4;
-  opacity: 0.35;
+.menu-wrapper {
+  position: relative;
+  margin-left: 10px;
 }
 
-.synapse-node {
-  fill: var(--panel-2);
-  stroke: var(--indigo);
-  stroke-width: 1.4;
+.menu-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.synapse .n1 { animation: pulse-node 3.6s ease-in-out infinite; }
-.synapse .n2 { animation: pulse-node 3.6s ease-in-out infinite 1.2s; }
-.synapse .n3 { animation: pulse-node 3.6s ease-in-out infinite 2.4s; fill: var(--teal-dim); stroke: var(--teal); }
-
-@keyframes pulse-node {
-  0%, 100% { r: 4; opacity: 1; }
-  50% { r: 5.5; opacity: 0.7; }
+.menu-btn:hover {
+  color: var(--teal);
+  border-color: var(--teal);
 }
 
-.synapse-big {
-  opacity: 0.9;
-  margin-bottom: 4px;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px;
+  min-width: 170px;
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.dropdown-menu.open {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  padding: 9px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background: var(--panel);
+  color: var(--teal);
 }
 
 /* ---- Chat window ---- */
@@ -131,6 +173,13 @@ body {
   text-align: center;
   max-width: 320px;
   color: var(--text-dim);
+}
+
+.empty-logo {
+  width: 46px;
+  height: 46px;
+  opacity: 0.9;
+  margin-bottom: 4px;
 }
 
 .empty-title {
@@ -303,13 +352,27 @@ body {
   border-radius: 3px;
 }
 
-/* ---- Reduced motion ---- */
+/* ---- Light theme override ---- */
 
-@media (prefers-reduced-motion: reduce) {
-  .synapse .n1, .synapse .n2, .synapse .n3,
-  .typing-indicator .dot {
-    animation: none;
-  }
+body.light-theme {
+  --bg: #f7f8fb;
+  --panel: #ffffff;
+  --panel-2: #f0f2f6;
+  --border: #dde1e8;
+  --text: #1c2230;
+  --text-dim: #6b7488;
+  --text-faint: #9aa2b1;
+
+  --indigo: #4a5fe0;
+  --indigo-dim: #e4e8ff;
+  --teal: #1fae8f;
+  --teal-dim: #d8f5ee;
+}
+
+body.light-theme {
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(74, 95, 224, 0.05), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(31, 174, 143, 0.05), transparent 40%);
 }
 
 @media (max-width: 480px) {
