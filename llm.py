@@ -50,7 +50,7 @@ def transcribe_audio(audio_file_path: str) -> str:
     with open(audio_file_path, "rb") as audio_file:
         transcription = client.audio.transcriptions.create(
             file=audio_file,
-            model = "Wisper-large-v3,"
+            model = "Whisper-large-v3",
         )
     return transcription.text    
 
