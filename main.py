@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from fastapi import File, UploadFile
 from llm import transcribe_audio
 import shutil
+import os
 
 app = FastAPI()
 
@@ -35,3 +36,16 @@ def chat_endpoint(request: ChatRequest):
     except Exception as e:
         return {"error": "Something went wrong. Please try again." , "details": str(e)}
 
+
+@app.post("/transcribe")
+async def transcribe_endpoint(audio: UploadFile = File(...)):
+    temp_path = f"temp_{audio.filename}"
+    
+    with open(temp_path, "wb") as buffer:
+        shutil.copyfileobj(audio.file, buffer)
+    
+    text = transcribe_audio(temp_path)
+
+    os.remove(temp_path)
+    
+    return {"text": text}
