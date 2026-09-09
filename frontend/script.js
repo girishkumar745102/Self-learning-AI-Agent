@@ -26,7 +26,7 @@ const userId = getUserId();
 sessionTag.textContent = "session · " + userId;
 
 // ---- Adding messages to the chat window ----
-function addMessage(text, sender) {
+function addMessage(text, sender, shouldSpeak = false) {
   const currentEmptyState = document.querySelector(".empty-state");
   if (currentEmptyState) {
     currentEmptyState.remove();
@@ -43,10 +43,14 @@ function addMessage(text, sender) {
   chatWindow.appendChild(messageDiv);
 
   chatWindow.scrollTop = chatWindow.scrollHeight;
+
+  if (sender === "agent" && shouldSpeak){
+    speakText(text);
+  }
 }
 
 // ---- Sending a message to the backend ----
-async function sendMessage(text) {
+async function sendMessage(text, isVoiceInput = false) {
   typingIndicator.classList.add("active");
   sendBtn.disabled = true;
 
@@ -60,7 +64,7 @@ async function sendMessage(text) {
     const data = await response.json();
 
     if (data.reply) {
-      addMessage(data.reply, "agent");
+      addMessage(data.reply, "agent" , isVoiceInput);
     } else if (data.error) {
       addMessage(data.error, "error");
     }
@@ -132,3 +136,79 @@ menuNewChat.addEventListener("click", () => {
 menuHistory.addEventListener("click", () => {
   alert("Chat history is coming soon — this will let you revisit past conversations once accounts are added.");
 });
+
+// ---- Voice recording (Speech-to-Text) ----
+const micBtn = document.getElementById("mic-btn");
+let mediaRecorder;
+let audioChunks = [];
+let isRecording = false;
+
+micBtn.addEventListener("click", async () => {
+  if (!isRecording) {
+    // Start recording
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaRecorder = new MediaRecorder(stream);
+      audioChunks = [];
+
+      mediaRecorder.ondataavailable = (event) => {
+        audioChunks.push(event.data);
+      };
+
+      mediaRecorder.onstop = async () => {
+        const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+        await sendAudioToBackend(audioBlob);
+      };
+
+      mediaRecorder.start();
+      isRecording = true;
+      micBtn.classList.add("recording");
+    } catch (err) {
+      addMessage("Microphone access denied or unavailable.", "error");
+    }
+  } else {
+    // Stop recording
+    mediaRecorder.stop();
+    isRecording = false;
+    micBtn.classList.remove("recording");
+  }
+});
+
+async function sendAudioToBackend(audioBlob) {
+  typingIndicator.classList.add("active");
+
+  try {
+    const formData = new FormData();
+    formData.append("audio", audioBlob, "recording.webm");
+
+    const response = await fetch("http://127.0.0.1:8000/transcribe", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    const transcribedText = data.text.trim();
+
+    if (transcribedText) {
+      addMessage(transcribedText, "user");
+      await sendMessage(transcribedText, true);
+    }
+  } catch (err) {
+    addMessage("Couldn't transcribe audio. Please try again.", "error");
+    typingIndicator.classList.remove("active");
+  }
+}
+
+// ---- Text-to-Speech (agent speaks its replies) ----
+function speakText(text) {
+  if (!window.speechSynthesis) return;
+
+  window.speechSynthesis.cancel(); // stop any previous speech first
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.rate = 1;
+  utterance.pitch = 1;
+  window.speechSynthesis.speak(utterance);
+}
+
+
+
