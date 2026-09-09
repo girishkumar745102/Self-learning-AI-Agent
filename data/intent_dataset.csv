@@ -1,20 +1,54 @@
 text,label
-hi there, greeting
-good morning, greeting
-hello how are you, greeting
-what i a neural network, question
-how do i reset my passward, question
-good evining, greeting
-hey, greeting
-explain machine leanrning, question
-what is deep learning, question
-how this work, question
-remind me to submit assignment, task
-add buy grocriesto my list, task
-set a reminder for 5pm, task
-this is amizing thankyou, feedback
-that answer was wrong, feedback
-you helped me a lot, feedback
-tell me a joke, casual_chat
-how is your day, casual_chat
-just wanted to chat, casual_chat
+hi,greeting
+hello,greeting
+hey,greeting
+hey there,greeting
+good morning,greeting
+good evening,greeting
+good afternoon,greeting
+namaste,greeting
+yo,greeting
+what's up,greeting
+hii,greeting
+hiya,greeting
+greeting,greeting
+hey buddy,greeting
+hello EvoMind,greeting
+hii EvoMind,greeting
+sup,greeting
+good to see you,greeting
+morning,greeting
+hello there,greeting
+hey what's going on,greeting
+hi how it's going,greeting
+hello good morning,greeting
+hey good evening,greeting
+hi there friend,greeting
+good morning to you,greeting
+hey hey,greeting
+hello again,greeting
+hi again,greeting
+good day,greeting
+morning buddy,greeting
+hey good morning,greeting
+hi good afternoon,greeting
+hello good afternoon,greeting
+hey there how are you,greeting
+hiya EvoMind,greeting
+yo EvoMind,greeting
+hi good evening,greeting
+good morning EvoMind,greeting
+hello everyone,greeting
+hey team,greeting
+hi good morning to you too,greeting
+greeting EvoMind,greeting
+hello my friend,greeting
+hey good day,greeting
+hi good day,greeting
+namaste EvoMind,greeting
+good morning sir,greeting
+hey good to see you,greeting
+heelo good to see you,greeting
+
+
+
