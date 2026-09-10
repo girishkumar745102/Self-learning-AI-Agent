@@ -48,7 +48,612 @@ hi good day,greeting
 namaste EvoMind,greeting
 good morning sir,greeting
 hey good to see you,greeting
-heelo good to see you,greeting
-
-
-
+hello good to see you,greeting
+bye,farewell
+goodbye,farewell
+see you later,farewell
+see ya,farewell
+take care,farewell
+catch you later,farewell
+gotta go bye,farewell
+good night,farewell
+night night,farewell
+talk to you later,farewell
+farewell,farewell
+see you soon,farewell
+bye bye,farewell
+i'm heading out bye,farewell
+gotta run see you,farewell
+see you tomorrow,farewell
+later,farewell
+bye for now,farewell
+okay bye,farewell
+alright goodbye,farewell
+see you next time,farewell
+catch you tomorrow,farewell
+have a good night,farewell
+i'll talk to you later,farewell
+gotta go now bye,farewell
+see ya later alligator,farewell
+peace out,farewell
+goodnight claude,farewell
+bye claude,farewell
+see you around,farewell
+i'm off bye,farewell
+leaving now bye,farewell
+talk soon bye,farewell
+have a great day bye,farewell
+okay i'm done bye,farewell
+goodbye for now,farewell
+see you next week,farewell
+alright i'm leaving bye,farewell
+bye take care,farewell
+gotta head out,farewell
+night claude,farewell
+see you later friend,farewell
+bye see you soon,farewell
+okay goodnight,farewell
+i'm logging off bye,farewell
+catch you next time,farewell
+bye have a nice day,farewell
+see ya soon,farewell
+okay talk later,farewell
+gotta dash bye,farewell
+farewell for now,farewell
+what is a neural network,question
+how does gradient descent work,question
+can you explain overfitting,question
+what is the capital of india,question
+how do i train a model,question
+what's the weather like today,question
+why does my code give an error,question
+what is your name,question
+how many days in a leap year,question
+can you explain transformers,question
+what is machine learning,question
+how do neural networks learn,question
+what is the difference between ai and ml,question
+how do i improve my model accuracy,question
+what is a decision tree,question
+why is my accuracy low,question
+how does backpropagation work,question
+what is regularization,question
+can you explain what an api is,question
+how does a database work,question
+what is the meaning of life,question
+how far is the moon from earth,question
+what causes rain,question
+how do i fix this bug,question
+why is python popular,question
+what is object oriented programming,question
+how does the internet work,question
+what is a rest api,question
+can you explain sql joins,question
+what is a foreign key,question
+how do i connect to a database,question
+what is docker,question
+how does deployment work,question
+what is git used for,question
+can you explain version control,question
+what is a pull request,question
+how do i center a div,question
+what is react used for,question
+can you explain recursion,question
+what is time complexity,question
+how does sorting work,question
+what is a hash map,question
+why do we normalize data,question
+what is cross validation,question
+how do embeddings work,question
+what is a vector database,question
+can you explain rag,question
+what is prompt engineering,question
+how does an llm generate text,question
+what is fine tuning,question
+why is my model overfitting,question
+remind me to drink water,task
+add milk to my shopping list,task
+set an alarm for 6am,task
+schedule a meeting tomorrow,task
+create a todo for tonight,task
+remind me to call my friend,task
+add this to my calendar,task
+set a timer for 10 minutes,task
+add project submission to my list,task
+remind me about the exam,task
+don't forget i have to submit my project tomorrow,task
+add buy groceries to my list,task
+remind me to take medicine at 8pm,task
+set a reminder for the meeting,task
+add finish assignment to my todo,task
+schedule my dentist appointment,task
+remind me to pay rent,task
+create a reminder for the exam,task
+add gym session to my calendar,task
+set an alarm for 7 am tomorrow,task
+remind me to submit the report,task
+add call mom to my list,task
+schedule a call with the team,task
+remind me to water the plants,task
+set a reminder for 9pm,task
+add clean the house to my todo,task
+remind me to renew my subscription,task
+create a task for tomorrow morning,task
+add pick up parcel to my list,task
+remind me about the deadline,task
+set a reminder for lunch,task
+add finish reading the book to my list,task
+schedule a workout for tomorrow,task
+remind me to check my email,task
+add pay bills to my calendar,task
+set an alarm for the flight,task
+remind me to backup my files,task
+create a todo list for the week,task
+add attend the webinar to my calendar,task
+remind me to send the invoice,task
+set a reminder to update my resume,task
+add book train tickets to my list,task
+remind me to revise for the test,task
+schedule a reminder for my birthday,task
+add submit assignment to my todo list,task
+remind me to charge my phone,task
+set a reminder to call the plumber,task
+add review the code to my list,task
+remind me to update the documentation,task
+schedule time to practice coding,task
+that was really helpful,feedback
+this is not correct,feedback
+great explanation thanks,feedback
+you made a mistake,feedback
+i loved this answer,feedback
+that didn't work for me,feedback
+perfect answer thank you,feedback
+this is confusing,feedback
+nice job on that,feedback
+that was wrong information,feedback
+this answer is amazing,feedback
+that's not what i asked,feedback
+really good response,feedback
+this is exactly what i needed,feedback
+that was unclear,feedback
+you got it right this time,feedback
+this explanation is great,feedback
+that's incorrect actually,feedback
+thanks this really helped,feedback
+i don't think that's right,feedback
+excellent answer,feedback
+that was a bit off,feedback
+this makes sense now thanks,feedback
+you misunderstood my question,feedback
+really appreciate this answer,feedback
+that's not accurate,feedback
+this cleared up my doubt,feedback
+that response was too short,feedback
+good work on this,feedback
+that's not quite what i meant,feedback
+thank you this was useful,feedback
+this is not helpful at all,feedback
+i like this explanation,feedback
+that was a wrong answer,feedback
+this is spot on,feedback
+you did a great job explaining,feedback
+that's incorrect please check again,feedback
+this response solved my problem,feedback
+that wasn't quite right,feedback
+really clear explanation thanks,feedback
+that answer missed the point,feedback
+this is very well explained,feedback
+that's not what happened,feedback
+good catch thanks for correcting,feedback
+this helped me a lot,feedback
+that was slightly wrong,feedback
+appreciate the detailed answer,feedback
+that's not the right approach,feedback
+this response is perfect,feedback
+you explained that really well,feedback
+that information was outdated,feedback
+how are you doing,casual_chat
+what do you like to do,casual_chat
+tell me something interesting,casual_chat
+do you have feelings,casual_chat
+what's your favorite color,casual_chat
+i am bored right now,casual_chat
+let's just talk for a bit,casual_chat
+tell me a fun fact,casual_chat
+are you a robot,casual_chat
+i had a long day,casual_chat
+how's your day going,casual_chat
+what do you think about ai,casual_chat
+do you ever get tired,casual_chat
+i'm just chilling right now,casual_chat
+what's new with you,casual_chat
+tell me a joke,casual_chat
+do you like music,casual_chat
+what's the most interesting thing you know,casual_chat
+i'm feeling a bit low today,casual_chat
+just wanted to say hi and chat,casual_chat
+what do you do for fun,casual_chat
+do you dream,casual_chat
+i'm procrastinating right now,casual_chat
+let's have a random conversation,casual_chat
+what's something cool you know,casual_chat
+i just wanted someone to talk to,casual_chat
+are you always this helpful,casual_chat
+do you get bored,casual_chat
+what's your opinion on this,casual_chat
+i'm just killing time,casual_chat
+tell me about yourself,casual_chat
+what's the weather like where you are,casual_chat
+do you like helping people,casual_chat
+i had a pretty good day today,casual_chat
+what's on your mind,casual_chat
+just wanted to check in,casual_chat
+do you have a favorite topic,casual_chat
+i'm curious about random stuff today,casual_chat
+what's something you find fascinating,casual_chat
+i'm just chatting for fun,casual_chat
+do you ever run out of things to say,casual_chat
+what's it like being an ai,casual_chat
+i'm feeling kind of chatty today,casual_chat
+let's talk about something random,casual_chat
+what's your favorite thing to talk about,casual_chat
+i just felt like saying hello,casual_chat
+do you like solving problems,casual_chat
+what's a random fact you know,casual_chat
+i'm just passing time chatting,casual_chat
+how's everything on your end,casual_chat
+what did i tell you yesterday,memory_query
+do you remember what i said earlier,memory_query
+what do you know about me,memory_query
+do you remember my name,memory_query
+what did we talk about last time,memory_query
+can you recall our previous conversation,memory_query
+do you remember my preferences,memory_query
+what have i told you so far,memory_query
+do you remember what i asked before,memory_query
+can you remind me what i said earlier,memory_query
+what do you remember about my project,memory_query
+do you recall my goals,memory_query
+what did i mention about my job,memory_query
+do you remember the topic we discussed yesterday,memory_query
+what have you learned about me,memory_query
+can you recall my last question,memory_query
+do you remember my favorite things,memory_query
+what do you remember from our chats,memory_query
+do you know what i told you about my plans,memory_query
+can you remember this for later,memory_query
+what did i say about my exam,memory_query
+do you remember my schedule,memory_query
+what do you know about my interests,memory_query
+can you recall what we discussed about the project,memory_query
+do you remember my routine,memory_query
+what did i tell you about my studies,memory_query
+do you remember our last conversation topic,memory_query
+can you recall what i asked you last week,memory_query
+do you remember my career goals,memory_query
+what have i shared with you before,memory_query
+do you remember my hobbies,memory_query
+can you recall the details i gave you,memory_query
+do you remember what i said about my family,memory_query
+what do you remember about my work,memory_query
+do you recall my previous questions,memory_query
+can you remind me what we planned,memory_query
+do you remember my deadlines,memory_query
+what did i tell you about my college,memory_query
+do you remember my location,memory_query
+can you recall my earlier messages,memory_query
+do you remember what i like,memory_query
+what have you stored about me,memory_query
+do you remember our first conversation,memory_query
+can you recall my past requests,memory_query
+do you remember what i asked yesterday,memory_query
+what do you know from our chat history,memory_query
+do you remember my birthday,memory_query
+can you recall what i said about my health,memory_query
+do you remember my plans for today,memory_query
+what did i mention about my goals,memory_query
+do you remember anything about me,memory_query
+who made you,identity
+what can you do,identity
+who created you,identity
+what is your purpose,identity
+are you a real person,identity
+what's your name,identity
+who built this system,identity
+what are your capabilities,identity
+are you an ai,identity
+what technology are you built on,identity
+who is your creator,identity
+what makes you different from other ais,identity
+can you tell me about yourself,identity
+what kind of assistant are you,identity
+what is evomind,identity
+who developed you,identity
+are you chatgpt,identity
+are you claude,identity
+what model are you based on,identity
+what can you help me with,identity
+what are your limitations,identity
+how were you trained,identity
+are you self aware,identity
+what is your main function,identity
+who owns you,identity
+what is your knowledge cutoff,identity
+can you learn new things,identity
+do you have a personality,identity
+what languages do you understand,identity
+are you connected to the internet,identity
+what's the difference between you and google,identity
+can you access my files,identity
+are you always available,identity
+what version are you,identity
+who is behind this project,identity
+what is your architecture,identity
+are you open source,identity
+how do you generate responses,identity
+what data were you trained on,identity
+can you make mistakes,identity
+are you a chatbot,identity
+what tools do you use,identity
+how smart are you,identity
+can you think for yourself,identity
+what's your job here,identity
+are you always learning,identity
+who programmed you,identity
+what's your primary role,identity
+are you free to use,identity
+what company made you,identity
+thank you so much,gratitude
+thanks a lot,gratitude
+i really appreciate this,gratitude
+thank you for your help,gratitude
+thanks for explaining that,gratitude
+much appreciated,gratitude
+thank you very much,gratitude
+thanks buddy,gratitude
+i appreciate your patience,gratitude
+thank you for the quick response,gratitude
+thanks a ton,gratitude
+really thankful for this,gratitude
+thank you for clarifying,gratitude
+thanks for the detailed answer,gratitude
+i owe you one thanks,gratitude
+thank you for being so helpful,gratitude
+thanks for sticking with me,gratitude
+appreciate you explaining that,gratitude
+thank you claude,gratitude
+thanks for the guidance,gratitude
+i'm grateful for your help,gratitude
+thank you for the support,gratitude
+thanks for helping me out,gratitude
+really appreciate your time,gratitude
+thank you for the info,gratitude
+thanks for clearing that up,gratitude
+i appreciate the effort,gratitude
+thank you for walking me through this,gratitude
+thanks for the quick help,gratitude
+much obliged thanks,gratitude
+thank you for everything,gratitude
+thanks for the tips,gratitude
+i appreciate you,gratitude
+thank you for your patience with me,gratitude
+thanks so much for this,gratitude
+really appreciate the explanation,gratitude
+thank you kindly,gratitude
+thanks a million,gratitude
+i'm thankful for this help,gratitude
+thank you for teaching me this,gratitude
+thanks for the assistance,gratitude
+appreciate the help a lot,gratitude
+thank you for the thorough answer,gratitude
+thanks for taking the time,gratitude
+i really appreciate your effort,gratitude
+thank you for the clarity,gratitude
+thanks for being patient,gratitude
+much thanks for this,gratitude
+thank you for the quick fix,gratitude
+thanks for solving that,gratitude
+that's not what i meant,correction
+i think you misunderstood,correction
+that's wrong let me clarify,correction
+no that's not correct,correction
+actually i meant something else,correction
+let me rephrase my question,correction
+that's not quite right,correction
+i wanted something different,correction
+you got it wrong,correction
+let me correct that,correction
+actually that's not accurate,correction
+i meant the other thing,correction
+that's not the answer i was looking for,correction
+let me clarify what i asked,correction
+no i asked something different,correction
+that's incorrect let me explain again,correction
+i think there's a misunderstanding,correction
+actually i need something else,correction
+that's not related to my question,correction
+let me try asking again,correction
+you misunderstood my request,correction
+that's not what i was asking for,correction
+i need to correct my earlier statement,correction
+actually that's the wrong approach,correction
+no that's not it,correction
+let me be more specific,correction
+that's off topic from what i asked,correction
+i think we got confused somewhere,correction
+that's not the right context,correction
+let me explain again what i meant,correction
+actually i made a typo earlier,correction
+that's not matching my question,correction
+i need to fix my previous message,correction
+no i meant a different thing,correction
+let me restate my question,correction
+that's not aligned with what i asked,correction
+actually scratch that let me ask again,correction
+i think i wasn't clear earlier,correction
+that's a misunderstanding on your part,correction
+let me try to clarify this better,correction
+actually i asked about something else,correction
+that's not the topic i meant,correction
+no that's a different issue,correction
+let me correct my previous question,correction
+actually i need to rephrase this,correction
+that's not what i was referring to,correction
+i think you misread my question,correction
+let me give more context,correction
+that's not related to my actual issue,correction
+actually i wanted to ask something different,correction
+no let me clarify further,correction
+this is not working properly,complaint
+i'm facing an issue with this,complaint
+something is broken here,complaint
+this keeps giving me an error,complaint
+i'm frustrated with this bug,complaint
+nothing is working as expected,complaint
+this feature is not functioning,complaint
+i keep getting the same error,complaint
+this is really annoying,complaint
+the app keeps crashing,complaint
+this response is too slow,complaint
+i'm having trouble with this,complaint
+this isn't loading properly,complaint
+the system keeps failing,complaint
+i'm stuck with this error,complaint
+this keeps freezing,complaint
+the output is not correct,complaint
+this is not behaving as expected,complaint
+i can't get this to work,complaint
+the model keeps failing,complaint
+this process keeps timing out,complaint
+i'm stuck on this problem for hours,complaint
+this error won't go away,complaint
+the code isn't running,complaint
+this is really frustrating,complaint
+nothing seems to fix this issue,complaint
+the server keeps crashing,complaint
+this bug is really annoying me,complaint
+i keep facing the same problem,complaint
+this isn't performing well,complaint
+the response time is too slow,complaint
+this keeps throwing exceptions,complaint
+i'm not able to fix this,complaint
+the connection keeps dropping,complaint
+this is really inconvenient,complaint
+the app is lagging a lot,complaint
+i can't figure out this error,complaint
+this keeps returning wrong results,complaint
+the system is unresponsive,complaint
+this is taking forever to load,complaint
+i'm annoyed with this constant error,complaint
+the feature is broken,complaint
+this keeps giving unexpected output,complaint
+the model isn't predicting correctly,complaint
+this is really buggy,complaint
+i can't get past this error,complaint
+the process keeps failing repeatedly,complaint
+this is not working at all,complaint
+the tool keeps malfunctioning,complaint
+i'm tired of this recurring issue,complaint
+this keeps breaking every time,complaint
+help me fix this code,code_help
+can you explain this function,code_help
+why is this code throwing an error,code_help
+how do i debug this,code_help
+can you review my code,code_help
+help me optimize this function,code_help
+why is my loop not working,code_help
+can you help me write a function for this,code_help
+how do i fix this syntax error,code_help
+can you explain this error message,code_help
+help me refactor this code,code_help
+why is this variable undefined,code_help
+can you help me with this algorithm,code_help
+how do i handle this exception,code_help
+can you check why this test is failing,code_help
+help me understand this stack trace,code_help
+why is this api call failing,code_help
+can you help me structure this class,code_help
+how do i fix this import error,code_help
+can you explain this code snippet,code_help
+help me write a unit test for this,code_help
+why is my function returning none,code_help
+can you help me with this regex,code_help
+how do i solve this leetcode problem,code_help
+can you explain this algorithm's time complexity,code_help
+help me fix this null pointer error,code_help
+why is this list comprehension not working,code_help
+can you help me connect to this database,code_help
+how do i fix this indentation error,code_help
+can you explain how this recursive function works,code_help
+help me trace this bug,code_help
+why does this code run slower than expected,code_help
+can you help me write this sql query,code_help
+how do i fix this merge conflict,code_help
+can you explain what this decorator does,code_help
+help me understand this async function,code_help
+why is this api returning a 404,code_help
+can you help me set up this environment,code_help
+how do i fix this dependency issue,code_help
+can you review this pull request,code_help
+help me understand this compiler error,code_help
+why is this test case failing,code_help
+can you help me implement this data structure,code_help
+how do i optimize this database query,code_help
+can you explain this design pattern,code_help
+help me fix this memory leak,code_help
+why is this thread not working correctly,code_help
+can you help me with this deployment error,code_help
+how do i fix this cors issue,code_help
+can you explain this configuration file,code_help
+help me understand this build error,code_help
+how's the weather today,small_talk_weather
+is it going to rain today,small_talk_weather
+what's the temperature outside,small_talk_weather
+is it sunny where you are,small_talk_weather
+will it snow tomorrow,small_talk_weather
+how hot is it today,small_talk_weather
+is it cold outside right now,small_talk_weather
+what's the forecast for tomorrow,small_talk_weather
+is it windy today,small_talk_weather
+will it be cloudy this weekend,small_talk_weather
+how's the climate this season,small_talk_weather
+is it humid today,small_talk_weather
+what's the weather like this week,small_talk_weather
+is a storm coming,small_talk_weather
+how's the weather in your area,small_talk_weather
+is it foggy this morning,small_talk_weather
+will it be sunny tomorrow,small_talk_weather
+what's today's high temperature,small_talk_weather
+is it going to be hot this weekend,small_talk_weather
+how cold will it get tonight,small_talk_weather
+is there a chance of rain later,small_talk_weather
+what's the weather forecast for the week,small_talk_weather
+is it a good day to go outside,small_talk_weather
+how's the weather looking this evening,small_talk_weather
+will there be thunderstorms today,small_talk_weather
+is it freezing outside right now,small_talk_weather
+what's the humidity level today,small_talk_weather
+is the weather nice for a walk,small_talk_weather
+how's the weather trending this month,small_talk_weather
+will it be windy this afternoon,small_talk_weather
+is it going to be a hot summer,small_talk_weather
+how's the weather where you live,small_talk_weather
+is it snowing right now,small_talk_weather
+what's the weather like in the morning,small_talk_weather
+will the rain stop soon,small_talk_weather
+is it a cloudy day today,small_talk_weather
+how warm is it outside,small_talk_weather
+is the weather good for a picnic,small_talk_weather
+what's the weather update for today,small_talk_weather
+is it drizzling outside,small_talk_weather
+how's the weather forecast looking,small_talk_weather
+will it be sunny all week,small_talk_weather
+is it chilly this morning,small_talk_weather
+what's the weather condition now,small_talk_weather
+is a heatwave coming,small_talk_weather
+how's the weather this afternoon,small_talk_weather
+is it going to be dry today,small_talk_weather
+will there be strong winds tomorrow,small_talk_weather
+is the sky clear today,small_talk_weather
+how's the weather compared to yesterday,small_talk_weather
+is it going to rain this evening,small_talk_weather
