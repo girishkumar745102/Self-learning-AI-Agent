@@ -1,6 +1,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score , classification_report
 
 df = pd.read_csv("data/intent_dataset.csv")
 
@@ -19,3 +21,12 @@ X_train_vec = vectorizer.fit_transform(X_train)
 X_test_vec = vectorizer.transform(X_test)
 
 print("Shape after TF-IPF:", X_train_vec.shape)
+
+model = LogisticRegression()
+model.fit(X_train_vec, Y_train)
+
+Y_pred = model.predict(X_test_vec)
+
+print("Accuracy:", accuracy_score(Y_test, Y_pred))
+print("\nDetailed Report:\n", classification_report(Y_test , Y_pred))
+
