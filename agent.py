@@ -11,6 +11,7 @@ This is the main agent that:
 
 from memory import MemoryManager
 from llm import generate_response
+from classifier import classify_message
 
 class SelfLearningAgent:
     def __init__(self, user_id: str):
@@ -18,11 +19,21 @@ class SelfLearningAgent:
         self.memory = MemoryManager()
 
     def chat(self, user_message: str) -> str:
+        intent = classify_message(user_message)
+        print(f"[Detected intent: {intent}]")
+
         relevant_memories = self.memory.search_memory(
             user_id= self.user_id, query=user_message
         )
 
-        reply = generate_response(user_message , relevant_memories)
+        if intent == "greeting":
+            reply = "Hey there! 👋 How can I help you today?"
+        elif intent == "farewell":
+            reply = "Goodbye! Take care 👋"
+        elif intent == "gratitude":
+            reply = "You're welcome! Happy to help 😊"
+        else:
+            reply = generate_response(user_message, relevant_memories)
 
         self.memory.add_memory(self.user_id, user_message)
 
