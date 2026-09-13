@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score , classification_report
+import joblib
 
 df = pd.read_csv("data/intent_dataset.csv")
 
@@ -29,4 +30,11 @@ Y_pred = model.predict(X_test_vec)
 
 print("Accuracy:", accuracy_score(Y_test, Y_pred))
 print("\nDetailed Report:\n", classification_report(Y_test , Y_pred))
+
+joblib.dump(model, "model.pkl")
+joblib.dump(vectorizer, "vectorizer.pkl")
+
+print("Model and vectorizer saved successfully!")
+
+
 
