@@ -8,6 +8,7 @@ import shutil
 import os
 from database import SessionLocal, User
 from auth import hash_password
+from auth import verify_password, create_access_token
 
 
 app = FastAPI()
@@ -87,6 +88,26 @@ def signup(request: SignupRequest):
     except Exception as e:
         db.rollback()
         return {"error": "Something went wrong", "details": str(e)}
+
+    finally:
+        db.close()
+
+
+class LoginRequest(BaseModel):
+    email: str
+    password: str
+
+@app.post("/login")
+def login(request: LoginRequest):
+    db = SessionLocal()
+    try:
+        user = db.query(User).filter(User.email == request.email).first()
+
+        if not user or not verify_password(request.password, user.hashed_password):
+            return {"error": "Invalid email or password"}
+
+        token = create_access_token({"user_id": user.id, "username": user.username})
+        return {"access_token": token, "token_type": "bearer"}
 
     finally:
         db.close()
